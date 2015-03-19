@@ -35,7 +35,6 @@ At present, an Outcome can only be triggered by using the analytics API and ther
 
 The code for triggering an Outcome is as follows.The new libraries for the OutcomeManager can be found in Sitecore.Analytics.Outcome.dll.
 
-```cs
 ID id =  Sitecore.Data.ID.NewID;
 ID interactionId =  Sitecore.Data.ID.NewID;
 ID contactId =  Sitecore.Data.ID.NewID;
@@ -53,7 +52,6 @@ var outcome = new ContactOutcome(id, definitionId, contactId)
 var manager = Factory.CreateObject("outcome/outcomeManager",true) as OutcomeManager;
 manager.Save(outcome);
 
-```
 
 However, it is possible to use the API to create a custom Rule Action to trigger an Outcome.
 
