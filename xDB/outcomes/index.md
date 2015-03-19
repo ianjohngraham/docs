@@ -35,19 +35,19 @@ At present, an Outcome can only be triggered by using the analytics API and ther
 
 The code for triggering an Outcome is as follows.The new libraries for the OutcomeManager can be found in Sitecore.Analytics.Outcome.dll.
 
-ID id =  Sitecore.Data.ID.NewID;
-ID interactionId =  Sitecore.Data.ID.NewID;
-ID contactId =  Sitecore.Data.ID.NewID;
+   ID id =  Sitecore.Data.ID.NewID;
+   ID interactionId =  Sitecore.Data.ID.NewID;
+   ID contactId =  Sitecore.Data.ID.NewID;
  
-// definition item for Sales Lead
-var definitionId = new ID("{C2D9DFBC-E465-45FD-BA21-0A06EBE942D6}");
+   // definition item for Sales Lead
+   var definitionId = new ID("{C2D9DFBC-E465-45FD-BA21-0A06EBE942D6}");
  
-var outcome = new ContactOutcome(id, definitionId, contactId)
-{
-   DateTime = DateTime.UtcNow.Date,
-   MonetaryValue = 10,
-   InteractionId = interactionId
-};
+  var outcome = new ContactOutcome(id, definitionId, contactId)
+  {
+      DateTime = DateTime.UtcNow.Date,
+      MonetaryValue = 10,
+      InteractionId = interactionId
+   };
  
 var manager = Factory.CreateObject("outcome/outcomeManager",true) as OutcomeManager;
 manager.Save(outcome);
