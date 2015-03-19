@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Sitecore 8 Outcomes
 category: xdb
